@@ -45,7 +45,7 @@
         "description": "相关性唤醒阈值",
         "hint": "当前消息与上文bot的消息相关性大时，唤醒bot。 降低阈值可更容易唤醒，保持对话连续性。 设为0时关闭检测",
         "type": "float",
-        "default": 0.71
+        "default": 0.8
     },
     "ask_wake": {
         "description": "答疑唤醒阈值",
