@@ -41,13 +41,13 @@
     },
     "block_prefix_cmd": {
         "description": "禁止使用前缀触发指令",
-        "hint": "开启后，即使用户使用前缀，也无法触发指令，但llm不受影响",
+        "hint": "开启后，即使用户使用前缀，也无法触发指令，但llm不受影响、bot管理员不受影响",
         "type": "bool",
         "default": false
     },
     "block_prefix_llm": {
         "description": "禁止使用前缀唤醒LLM",
-        "hint": "开启后，即使用户使用前缀，也无法唤醒llm，但指令不受影响",
+        "hint": "开启后，即使用户使用前缀，也无法唤醒llm，但指令不受影响、bot管理员不受影响",
         "type": "bool",
         "default": false
     },

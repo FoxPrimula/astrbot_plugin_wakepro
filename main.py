@@ -220,13 +220,13 @@ class WakeProPlugin(Star):
                     continue
 
                 # 屏蔽前缀指令
-                if self.conf["block_prefix_cmd"] and is_cmd:
+                if  self.conf["block_prefix_cmd"] and not event.is_admin() and is_cmd:
                     logger.debug(f"{uid} 触发前缀指令, 忽略此次唤醒")
                     event.stop_event()
                     return
 
                 # 屏蔽前缀 LLM（即非指令）
-                if self.conf["block_prefix_llm"] and not is_cmd:
+                if self.conf["block_prefix_llm"] and not event.is_admin() and not is_cmd:
                     logger.debug(f"{uid} 触发前缀LLM, 忽略此次唤醒")
                     event.stop_event()
                     return
