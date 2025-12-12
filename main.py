@@ -117,7 +117,8 @@ class WakeProPlugin(Star):
         if args or kwargs:
             try:
                 logger.debug(f"[wakepro] on_group_msg received extra args={args} kwargs={kwargs}")
-            except Exception logger.debug("[wakepro] on_group_msg received extra args (repr failed)")
+            except Exception: 
+                logger.debug("[wakepro] on_group_msg received extra args (repr failed)")
         try:
             chain = event.get_messages()
             bid: str = event.get_self_id()
