@@ -109,9 +109,15 @@ class WakeProPlugin(Star):
         logger.debug(f"插件的指令列表：{commands}")
         return commands
 
+        
     @filter.event_message_type(filter.EventMessageType.GROUP_MESSAGE, priority=99)
-    async def on_group_msg(self, event: AstrMessageEvent):
-        """主入口"""
+    async def on_group_msg(self, event: AstrMessageEvent, *args, **kwargs):
+        """主入口（兼容可能传入的额外参数）"""
+         # 如果 framework 传入了额外参数，记录它们以便排查
+        if args or kwargs:
+            try:
+                logger.debug(f"[wakepro] on_group_msg received extra args={args} kwargs={kwargs}")
+            except Exception logger.debug("[wakepro] on_group_msg received extra args (repr failed)")
         try:
             chain = event.get_messages()
             bid: str = event.get_self_id()
