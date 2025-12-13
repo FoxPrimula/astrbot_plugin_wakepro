@@ -13,7 +13,7 @@ _✨ [astrbot](https://github.com/AstrBotDevs/AstrBot)唤醒增强插件 ✨_
 [![GitHub](https://img.shields.io/badge/作者-Zhalslar-blue)](https://github.com/Zhalslar)
 
 </div>
-
+[[在这里打个标记，这样我就知道这是官方版还是debug版]]
 # ❗❗更新到v1.1.4+的用户请注意，v1.1.4重构了相关度的算法，相关性唤醒的阈值变化会更平缓，请重新根据bot发言频率调整阈值
 
 ## 🤝 介绍
